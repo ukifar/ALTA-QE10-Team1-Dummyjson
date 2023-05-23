@@ -14,4 +14,11 @@ public class CartsAPI {
         SerenityRest.given()
                 .pathParam(DummyjsonResponses.ID,id);
     }
+    @Step("Get a single cart with invalid parameter id")
+    public void getaSingleCartWithInvalidParamId(String id) {
+        SerenityRest.given()
+                .pathParam(DummyjsonResponses.ID,id);
+    }
+
+
 }

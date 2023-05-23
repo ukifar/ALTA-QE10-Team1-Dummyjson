@@ -4,7 +4,7 @@ public class DummyjsonResponses {
     //line 4-12 hanya boleh diisi Faruqi
 
     public static String ID = "id";
-
+    public static String ERRORMESSAGE = "message";
 
 
 

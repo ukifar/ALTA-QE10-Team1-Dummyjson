@@ -14,6 +14,7 @@ import starter.dummyjson.Utils.DummyjsonResponses;
 import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.core.StringContains.containsString;
 
 public class GetSingleCartStepDef {
     @Steps
@@ -40,5 +41,33 @@ public class GetSingleCartStepDef {
     public void validateJsonSchemaGetSingleCartWithValidParameterId() {
         File json = new File(Constants.JSON_SCHEMA+"GetSingleCartWithValidParam.json");
         SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
+    }
+
+    //Negative Case 1
+    @Given("Get single cart with invalid id {string}")
+    public void getSingleCartWithInvalidId(String id) {
+        cartsAPI.getaSingleCartWithInvalidParamId(id);
+    }
+    @Then("Should return status code {int} Not Found")
+    public void shouldReturnStatusCodeNotFound(int notFound) {
+        SerenityRest.then().statusCode(notFound);
+    }
+    @And("Response body message {string}")
+    public void responseBodyMessage(String errorMessage) {
+        SerenityRest.then()
+                .assertThat()
+                .body(DummyjsonResponses.ERRORMESSAGE, containsString(errorMessage));
+    }
+
+    //Negative Case 2
+    @Given("Get single cart with exceed parameter id {int}")
+    public void getSingleCartWithExceedParameterId(int id) {
+        cartsAPI.getaSingleCartWithValidParamId(id);
+    }
+
+    //Negative Case 3
+    @Given("Get a single cart with blank parameter id {string}")
+    public void getASingleCartWithBlankParameterId(String id) {
+        cartsAPI.getaSingleCartWithInvalidParamId(id);
     }
 }
