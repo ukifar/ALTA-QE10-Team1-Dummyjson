@@ -1,5 +1,5 @@
 Feature: GET a Single Cart
-  @Test @PositiveCase
+  @Test @PositiveCase @Carts
   Scenario Outline: Get a single cart with valid parameter id should success then return 200 response code
     Given Get single cart with valid id <id>
     When Send request get single cart
@@ -9,3 +9,4 @@ Feature: GET a Single Cart
     Examples:
       | id |
       | 1  |
+
