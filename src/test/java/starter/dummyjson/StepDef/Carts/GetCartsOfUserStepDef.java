@@ -28,7 +28,7 @@ public class GetCartsOfUserStepDef {
     public void sendRequestGetCartsOfUser() {
         SerenityRest.when().get(CartsAPI.GET_CARTS_OF_USER);
     }
-    @And("Response body data carts id is [{int}]")
+    @And("Response body data carts id should be [{int}]")
     public void responseBodyDataCartsIdIsCartsId(int id) {
         SerenityRest.then().body(DummyjsonResponses.CARTS_ID_ARRAY, equalTo(id));
     }

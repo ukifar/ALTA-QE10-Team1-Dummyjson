@@ -4,7 +4,7 @@ Feature: GET Carts of User
     Given Get carts of user with valid id <id>
     When Send request get carts of user
     Then Should return status code 200 OK
-    And Response body data carts id is [19]
+    And Response body data carts id should be [19]
     And Validate json schema get carts of user with valid parameter id
     Examples:
       | id |
