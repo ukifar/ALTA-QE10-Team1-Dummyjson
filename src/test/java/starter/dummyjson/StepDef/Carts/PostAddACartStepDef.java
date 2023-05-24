@@ -30,7 +30,7 @@ public class PostAddACartStepDef {
     }
     @And("Response body data user id was {int} and product title was {string}")
     public void responseBodyDataUserIdShouldBe(int id, String product) {
-        SerenityRest.and().body(DummyjsonResponses.USER_ID,equalTo(id)).body(DummyjsonResponses.PRODUCTS_TITLE,equalTo(product));;
+        SerenityRest.and().body(DummyjsonResponses.USER_ID,equalTo(id)).body(DummyjsonResponses.PRODUCTS_TITLE,equalTo(product));
     }
     @And("Validate json schema add a cart with valid json")
     public void validateJsonSchemaAddACartWithValidJson() {
