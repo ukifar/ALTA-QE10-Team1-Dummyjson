@@ -14,6 +14,7 @@ public class CartsAPI {
     public static String POST_ADD_A_CART = Constants.BASE_URL+"/carts/add";
     public static String PUT_UPDATE_A_CART = Constants.BASE_URL+"/carts/{id}";
     public static String DELETE_A_CART = Constants.BASE_URL+"/carts/{id}";
+    public static String PATCH_UPDATE_A_CART = Constants.BASE_URL+"/carts/{id}";
 
 
     @Step("Get a single cart with valid parameter id")
@@ -52,9 +53,9 @@ public class CartsAPI {
     @Step("Put update a cart with string parameter id")
     public void putUpdateACartWithStringParam(String id, File json) {
         SerenityRest.given()
-                .pathParam(DummyjsonResponses.ID,id)
-                .contentType(ContentType.JSON)
-                .body(json);
+                    .pathParam(DummyjsonResponses.ID,id)
+                    .contentType(ContentType.JSON)
+                    .body(json);
     }
     @Step("Delete a chart with int parameter id")
     public void deleteACartWithIntParam(int id) {
@@ -64,6 +65,14 @@ public class CartsAPI {
     @Step("Delete a chart with string parameter id")
     public void deleteACartWithStringParam(String id) {
         SerenityRest.given()
-                .pathParam(DummyjsonResponses.ID,id);
+                    .pathParam(DummyjsonResponses.ID,id);
     }
+    @Step("Patch update a cart with int parameter id")
+    public void patchUpdateACart(int id, File json) {
+        SerenityRest.given()
+                    .pathParam(DummyjsonResponses.ID,id)
+                    .contentType(ContentType.JSON)
+                    .body(json);
+    }
+
 }
