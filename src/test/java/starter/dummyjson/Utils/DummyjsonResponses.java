@@ -5,8 +5,8 @@ public class DummyjsonResponses {
 
     public static String ID = "id";
     public static String ERRORMESSAGE = "message";
-
-
+    public static String CARTS_ID = "carts.id";
+    public static String CARTS_ID_ARRAY = "carts[0].id";
 
 
 
