@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
+import starter.dummyjson.API.CartsAPI;
 import starter.dummyjson.Utils.Constants;
 import starter.dummyjson.Utils.DummyjsonResponses;
 
