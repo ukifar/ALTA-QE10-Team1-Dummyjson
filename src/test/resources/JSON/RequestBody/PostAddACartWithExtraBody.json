@@ -1,0 +1,10 @@
+{
+  "userId": 1,
+  "Country": "Jamaica",
+  "products": [
+    {
+      "id": 1,
+      "quantity": 1
+    }
+  ]
+}
