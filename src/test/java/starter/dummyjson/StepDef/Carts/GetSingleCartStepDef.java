@@ -15,7 +15,6 @@ import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.core.StringContains.containsString;
-
 public class GetSingleCartStepDef {
     @Steps
     CartsAPI cartsAPI;
