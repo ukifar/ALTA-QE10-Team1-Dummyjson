@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "price",
+    "stock",
+    "rating",
+    "description",
+    "brand",
+    "category"
+  ]
+}
