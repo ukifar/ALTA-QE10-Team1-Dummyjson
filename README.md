@@ -39,7 +39,10 @@
 ![gambar1](gambar1.png)
 
 ### D. Image Coverage of Each Feature
-
+![auth](auth.jpg)
+![carts](carts.jpg)
+![products](products.jpg)
+![users](users.jpg)
 
 ### E. Tools & Technology Stack
 ![java](java.png)
