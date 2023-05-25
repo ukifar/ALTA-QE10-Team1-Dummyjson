@@ -12,9 +12,9 @@ public class DummyjsonResponses {
 
     //line 13-21 hanya boleh diisi Arum
 
-
-
-
+public static String FIRSTNAME ="firstName";
+public static String LASTNAME = "lastName";
+public static String AGE = "age";
 
 
 
