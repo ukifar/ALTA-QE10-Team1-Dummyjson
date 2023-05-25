@@ -28,7 +28,7 @@ public class PostLoginStepDef {
     public void sendRequestPostToLogin() {
         SerenityRest.when().post(CartsAPI.POST_LOGIN);
     }
-    @And("And Response body token should be {string}")
+    @And("And Response body email should be {string}")
     public void andResponseBodyTokenShouldBe(String email) {
         SerenityRest.and().body(DummyjsonResponses.EMAIL,equalTo(email));
     }

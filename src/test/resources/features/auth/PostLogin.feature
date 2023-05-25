@@ -4,7 +4,7 @@ Feature: POST Login User
     Given Login with valid JSON
     When Send request post to login
     Then Should return status code 200 OK
-    And And Response body token should be "<email>"
+    And And Response body email should be "<email>"
     And Validate json schema success login with valid username and password
     Examples:
       | email             |
