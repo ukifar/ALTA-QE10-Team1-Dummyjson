@@ -19,7 +19,7 @@ public class LimitSkipSelectProductStepDef {
     @Steps
     ProductsAPI productsAPI;
 
-    @Given("Limit {}, skip {}, and select {} products with valid parameter page")
+    @Given("Limit {int}, skip {int}, and select {} products with valid parameter page")
     public void andProductsWithValidParameterPage(int limit, int skip, String select) {
         productsAPI.lssProductsValid(limit,skip,select);
     }
@@ -30,11 +30,10 @@ public class LimitSkipSelectProductStepDef {
     }
 
     @And("Response body limit should be {} skip should be {}")
-    public void responseBodyLimitShouldBeSkipShouldBeAndSelectShouldBe(int limit, int skip, String select) {
+    public void responseBodyLimitShouldBeSkipShouldBeAndSelectShouldBe(int limit, int skip) {
         SerenityRest.and()
                 .body(DummyjsonResponses.LIMIT, equalTo(limit))
-                .body(DummyjsonResponses.SKIP, equalTo(skip))
-                .body(DummyjsonResponses.SELECT, equalTo(select));
+                .body(DummyjsonResponses.SKIP, equalTo(skip));
     }
 
     @Given("Limit {}, skip {}, and select {} products with invalid parameter page")

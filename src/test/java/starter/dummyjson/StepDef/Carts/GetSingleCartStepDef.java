@@ -32,8 +32,8 @@ public class GetSingleCartStepDef {
     public void shouldReturnStatusCodeOK(int ok) {
         SerenityRest.then().statusCode(ok);
     }
-    @And("Response body id should be {int}")
-    public void responseBodyIdShouldBe(int id) {
+    @And("Response cart body id should be {int}")
+    public void responseCartBodyIdShouldBe(int id) {
         SerenityRest.then().body(DummyjsonResponses.ID,equalTo(id));
     }
     @And("Validate json schema get single cart with valid parameter id")

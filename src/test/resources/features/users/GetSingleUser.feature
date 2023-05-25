@@ -4,7 +4,7 @@ Feature: GET
     Given Get single  with valid id <id>
     When Send request get single users
     Then Status Code should be 200 OK
-    And Response body id should be <id>
+    And Response user body id should be <id>
     And Validate json schema get single users with valid parameter id
     Examples:
       | id |

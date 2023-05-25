@@ -4,7 +4,7 @@ Feature: GET a Single Cart
     Given Get single cart with valid id <id>
     When Send request get single cart
     Then Should return status code 200 OK
-    And Response body id should be <id>
+    And Response cart body id should be <id>
     And Validate json schema get single cart with valid parameter id
     Examples:
       | id |

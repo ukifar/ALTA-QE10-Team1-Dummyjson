@@ -27,8 +27,8 @@ public class UserStepDef {
     public void sendRequestGetSingleUsers() {
         SerenityRest.when().get(UsersAPI.GET_SINGLE_USER);
     }
-    @And("Response body id should be {int}")
-    public void responseBodyIdShouldBe(int id) {
+    @And("Response user body id should be {int}")
+    public void responseUserBodyIdShouldBe(int id) {
         SerenityRest.and().body(DummyjsonResponses.ID,equalTo(id));
     }
 
@@ -71,10 +71,10 @@ public class UserStepDef {
         File json = new File(Constants.JSON_REQUEST+"Blank.json");
         usersAPI.postNewUse(json);
     }
-    @Then("Status code should be {int} Bad Request")
-    public void statusCodeShouldBeBadRequest(int err) {
-        SerenityRest.then().statusCode(err);
-    }
+//    @Then("Status code should be {int} Bad Request")
+//    public void statusCodeShouldBeBadRequest(int err) {
+//        SerenityRest.then().statusCode(err);
+//    }
     @And("Validate post create new user JSON Schema")
     public void validatePostCreateNewUserJSONSchema() {
         File json = new File (Constants.JSON_SCHEMA+"PostUserBlank.json");
