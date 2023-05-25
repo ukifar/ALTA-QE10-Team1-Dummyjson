@@ -15,6 +15,7 @@ public class CartsAPI {
     public static String PUT_UPDATE_A_CART = Constants.BASE_URL+"/carts/{id}";
     public static String DELETE_A_CART = Constants.BASE_URL+"/carts/{id}";
     public static String PATCH_UPDATE_A_CART = Constants.BASE_URL+"/carts/{id}";
+    public static String POST_LOGIN = Constants.BASE_URL+ "/auth/login";
 
 
     @Step("Get a single cart with valid parameter id")
@@ -74,5 +75,10 @@ public class CartsAPI {
                     .contentType(ContentType.JSON)
                     .body(json);
     }
-
+    @Step("Post login with valid JSON")
+    public void postLogin(File json) {
+        SerenityRest.given()
+                    .contentType(ContentType.JSON)
+                    .body(json);
+    }
 }

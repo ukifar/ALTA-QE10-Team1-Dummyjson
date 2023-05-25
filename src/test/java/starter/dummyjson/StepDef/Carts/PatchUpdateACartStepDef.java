@@ -11,7 +11,7 @@ import starter.dummyjson.Utils.Constants;
 
 import java.io.File;
 
-public class PatchUpdateUserStepDef {
+public class PatchUpdateACartStepDef {
     @Steps
     CartsAPI cartsAPI;
 

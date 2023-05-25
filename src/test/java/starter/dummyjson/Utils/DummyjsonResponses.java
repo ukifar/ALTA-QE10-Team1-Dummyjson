@@ -8,7 +8,7 @@ public class DummyjsonResponses {
     public static String USER_ID = "userId";
     public static String PRODUCTS_TITLE = "products[0].title";
     public static String PRODUCTS_QUANTITY = "products[0].quantity";
-
+    public static String EMAIL = "email";
 
     //line 13-21 hanya boleh diisi Arum
 
