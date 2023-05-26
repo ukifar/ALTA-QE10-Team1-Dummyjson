@@ -38,18 +38,18 @@
 
 ![gambar1](gambar1.png)
 
-### D. Image Coverage of Each Feature
-![auth](auth.jpg)
-![carts](carts.jpg)
-![products](products.jpg)
-![users](users.jpg)
+### D. Coverage of Each Feature
+    > Auth      : 100% covered to automation
+    > Carts     : 100% covered to automation
+    > Products  : 87% covered to automation
+    > Users     : 50% covered to automation
 
 ### E. Tools & Technology Stack
-![java](java.png)
-![serenity.png](serenity.png)
-![restAssured.png](restAssured.png)
-![cucumber.png](cucumber.png)
-![postman.png](postman.png)
+    > Java
+    > Serenity BDD
+    > Rest Assured
+    > Cucumber
+    > Postman
 
 ### F. How To Run Project
     > Manual Testing using Postman:
@@ -57,11 +57,14 @@
       b. Choose method
       c. Input url
       d. Input body (if needed)
-      e. Click send
+      e. Input assertion
+      f. Click send
 
     > Automation Testing:
       a. Click on text editor's terminal
       b. input => mvn clean verify
+         or:
+      a. You can click run from CucumberTestSuite
 
 ### G. Team Member
     > Muhammad Faruqi Rabbani    =>  Auth & Carts

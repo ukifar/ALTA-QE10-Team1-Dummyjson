@@ -11,7 +11,7 @@ Feature: GET
       | 1  |
       | 2  |
 
-    @Test @NegativeCase @Users
+  @Test @NegativeCase @Users
   Scenario Outline: Get a single users with invalid parameter id
     Given Get a single with invalid id <id>
     When Send request get single users invalid

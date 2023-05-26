@@ -1,11 +1,10 @@
 Feature: PUT user API Automation Testing
   @Test @PositiveCase @Users
-    Scenario Outline: PUT User with valid parameter id
+  Scenario Outline: PUT User with valid parameter id
     Given PUT user with valid json and id <id>
     When Send put update user
     Then Status Code should be 200 OK
     And Response body lastName was "Owais"
-
     Examples:
       | id |
       | 1  |

@@ -8,9 +8,9 @@ Feature: Post a new user
     And Validate post create user JSON Schema
 
 
-@Test @NegativeCase @Users
+  @Test @NegativeCase @Users
   Scenario: add a new user with invalid parameter
-  Given Post create new user with invalid parameter
-  When Send post create user
-  Then Status code should be 400 Bad Request
-  And Validate post create new user JSON Schema
+    Given Post create new user with invalid parameter
+    When Send post create user
+    Then Status code should be 400 Bad Request
+    And Validate post create new user JSON Schema
